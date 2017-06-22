@@ -1,0 +1,12 @@
+before_install:
+- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+script:
+- mkdir pdf
+- pdflatex -output-directory pdf tex/resume.tex
+deploy:
+  provider: releases
+  file:
+  - pdf/resume.pdf
+  skip_cleanup: true
+  on:
+    tags: true
