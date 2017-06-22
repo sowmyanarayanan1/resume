@@ -2,7 +2,7 @@ before_install:
 - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-xetex tex-gyre texlive-latex-recommended dvipng"
 script:
 - mkdir pdf
-- pdflatex -interaction=nonstopmode -output-directory pdf resume.tex
+- xelatex -interaction=nonstopmode -output-directory pdf resume.tex
 deploy:
   provider: releases
   file:
