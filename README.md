@@ -4,8 +4,8 @@
 
 Forked from (Github : cies)[https://github.com/cies/resume] and modified by Sathish Narayanan. 
 
-# Terms of sharing
+Travis integration reference : https://github.com/harshjv/travis-ci-latex-pdf
 
-Feel free to use, copy, fork, share, study and/or modify it because the LaTeX source code of the resume.sty file is MIT licensed.
+# Terms of sharing
 
 The text of my resume in the resume.tex file is CC-NC-ND licensed.
