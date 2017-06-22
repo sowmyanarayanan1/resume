@@ -1,0 +1,48 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\input{sections/address}
+% a horizontal line with some vertical spacing before and after
+\spacedhrule{0.9em}{-0.4em}  
+
+\input{sections/summary}
+\spacedhrule{0.9em}{-0.4em}
+
+\input{sections/experience}  
+\spacedhrule{0.9em}{-0.4em}
+
+\input{sections/education}
+\spacedhrule{0.5em}{-0.4em}
+
+\input{sections/skills}
+\spacedhrule{1.6em}{-0.4em}
+
+\input{sections/interest}
+\end{document}
