@@ -1,13 +1,15 @@
 before_install:
-- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-xetex tex-gyre texlive-latex-recommended dvipng"
+- sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra texlive-xetex tex-gyre texlive-latex-recommended
+  dvipng
 script:
 - mkdir pdf
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory pdf resume.tex
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file:
-  - pdf/resume.pdf
+  api_key:
+    secure: J5iJcgJWo/jxUMTirgsfpvTbCpjtitNGyK0KLPqbeCJy7c0B9nsxVbDVCYCaaJIQRqbSmluExIbi46H7Rph5uhlHkxuU82nIEJVz+plbhv+swpX62A/9RorewY8QYjK1pxnKVzevZaKsd6IJp33DkW2Ty60rKsMjSFDHjBfhx13cMsJvc7sTTPyVAqZkcpKWdHq9fUmPGe3F5wrrSCuMtChQ1PindL73Gw9ZUVYQDDYKfZaEfbygxfIJgEUuZg0Q6r0d58kFXG7OcecBkkBvlLP/SGbVhfCaEiJwKui5q7lPxAcyExOkeH1Ikdydn8vyQ384WcvLA6/NBPVXUOizhmxnlNKudQatm4Vp9q9MmOqf/3yP3zib8V3DuHi3muxn915Ar4QL9D3ShCIK0zfqvjYydxYz+4I26olUCHWXuStcHNAveq+jmvfNxaiBH+rB70JPtSBVMFPxCrUAZjXlB+cuinL96KbrUSvPMwbVuMMGzXl8B5lZ3GXdmGpzRu3bc+dyUOjUB6fXFDrfOyUYeK2sYLyqXa19pHAgtmOgN8WKnULSmQv75idzZLvXpo0uibti65G4OzbkRUieO4tWf0iTm+IIy7iPVG6VCkSJqw8p67LeNg3tj07LN5Xzjj79GPqfv8nDXIrJ50zel3qS/5or+fHI85zkVLmjIM3JrAM=
+  file: pdf/resume.pdf
   skip_cleanup: true
   on:
     tags: true
