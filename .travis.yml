@@ -5,7 +5,7 @@ script:
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory pdf resume.tex
 deploy:
   provider: releases
-  api_key: $GITHUB_OAUTH_TOKEN
+  api_key: "GITHUB OAUTH TOKEN"
   file:
   - pdf/resume.pdf
   skip_cleanup: true
